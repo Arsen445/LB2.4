@@ -4,14 +4,16 @@
 
 if __name__ == '__main__':
     lis = []
-    i_null = []
-    k = 0
+    lisa = []
     n = int(input('Введите длину массива: '))
+    k = 0
     print('Введите элементы массива\n')
     for i in range(n):
         lis.append(int(input()))
-        if lis[i] == 0:
-            i_null.append(i)
+   
+    for i,x  in enumerate(lis):
+        if x == 0:
             k += 1
+            print(i, 'индекс нулевого элемента')
     print('Колчисетво нулевых элементов = ', k)
-    print('Индексы нулевых элементов = ', i_null)
+    
